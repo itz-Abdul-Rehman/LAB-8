@@ -2,7 +2,7 @@
 using namespace std;
 int main()
 {
-    int books, fine, days;
+    int books, fine, days, total_fine = 0;
     cout << "Enter the number of books returned late: ";
     cin >> books;
     for (int i = 1; i <= books; i++)
@@ -22,8 +22,10 @@ int main()
                 fine = fine * 2;
             }
         }
-        cout << "Book " << i << " fine= " << fine << endl;
+        cout << "Book " << i << " fine= " << fine << endl<<endl;
+        total_fine = total_fine + fine;
     }
+        cout<<"Total fine = "<<total_fine;
 
     return 0;
 }
